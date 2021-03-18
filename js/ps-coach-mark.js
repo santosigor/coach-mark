@@ -33,7 +33,7 @@ $( window ).on("load", function() {
   // close
   $(document).on('click', '.ps-coach-mark__close, .ps-coach-mark__close-link', function (e) {
 	  e.preventDefault();
-	  $('.ps-coach-mark').fadeOut();
+	  $('.ps-coach-mark').fadeOut(500, 'swing');
 	  $('body').removeClass('ps-coach-mark-active');
 	  psCoachMarkSetCookie('psCoachMarkCookie', '1', 30);
 	});
@@ -42,9 +42,9 @@ $( window ).on("load", function() {
 	$(document).on('click', '.ps-coach-mark__start__button', function (e) {
 	  e.preventDefault();
 	  $('body').removeClass('ps-coach-mark-active');
-	  $('.ps-coach-mark__start').fadeOut();
+	  $('.ps-coach-mark__start').fadeOut(500, 'swing');
 		$('.ps-coach-mark__step__button.prev').hide();
-	  $('.ps-coach-mark__step[ps-coach-mark-step="0"]').addClass('active').fadeIn();
+	  $('.ps-coach-mark__step[ps-coach-mark-step="0"]').addClass('active').fadeIn(500, 'swing');
 		$('html, body').animate({ scrollTop: $('.ps-coach-mark__step.active  .ps-coach-mark__step__box').offset().top - 50 }, 500);
 	});
 
@@ -52,8 +52,8 @@ $( window ).on("load", function() {
 	$(document).on('click', '.ps-coach-mark__finish .ps-coach-mark__step__button.prev', function (e) {
 	  e.preventDefault();
 	  $('body').removeClass('ps-coach-mark-active');
-	  $('.ps-coach-mark__finish').fadeOut();
-	  $('.ps-coach-mark__step[ps-coach-mark-step="'+($('div[ps-coach-mark-title]').length-1)+'"]').addClass('active').fadeIn();
+	  $('.ps-coach-mark__finish').fadeOut(500, 'swing');
+	  $('.ps-coach-mark__step[ps-coach-mark-step="'+($('div[ps-coach-mark-title]').length-1)+'"]').addClass('active').fadeIn(500, 'swing');
 	  $('html, body').animate({ scrollTop: $('.ps-coach-mark__step.active  .ps-coach-mark__step__box').offset().top - 50}, 500);
 	});
 
@@ -118,10 +118,10 @@ function psCoachMarkStepChange(t) {
 		$('.ps-coach-mark__step').hide().removeClass('active');
 	  $('body').addClass('ps-coach-mark-active');
 		$('html, body').animate({ scrollTop: 0 }, 500);
-		$('.ps-coach-mark__finish').fadeIn().css('display','flex');
+		$('.ps-coach-mark__finish').fadeIn(500, 'swing').css('display','flex');
 	} else {
 		$('.ps-coach-mark__step').hide().removeClass('active');
-		$('.ps-coach-mark__step[ps-coach-mark-step="'+step+'"]').addClass('active').fadeIn();
+		$('.ps-coach-mark__step[ps-coach-mark-step="'+step+'"]').addClass('active').fadeIn(500, 'swing');
 	}
 	$('html, body').animate({ scrollTop: $('.ps-coach-mark__step.active .ps-coach-mark__step__box').offset().top - 50 }, 500);
 }
