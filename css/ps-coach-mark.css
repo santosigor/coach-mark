@@ -1,0 +1,321 @@
+.ps-coach-mark-active {
+	position: relative;
+	min-height:100%;
+}
+
+.ps-coach-mark-active:before {
+	content: '';
+  height: 100%;
+  width: 100%;  
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+	z-index: 3000;
+	background-image: url('../images/ps-coach-mark-bg.png');
+}
+
+.ps-coach-mark {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 3000;
+}
+
+.ps-coach-mark__close {
+	position: fixed;
+  top: 10px;
+  width: 42px;
+  height: 39px;
+  z-index: 4000;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  right: 10px;
+  display: block;
+  background: url('../images/ps-coach-mark-close.png') no-repeat top right;
+  cursor: pointer;
+}
+
+.ps-coach-mark__start, .ps-coach-mark__finish {
+	text-align: center;
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.ps-coach-mark__content {
+	width: 100%;
+	position: relative;
+}
+
+.ps-coach-mark__finish .ps-coach-mark__content {
+	max-width: 600px;
+	margin: 0 auto;
+}
+
+.ps-coach-mark__start__title {
+	font-size: 30px;
+  line-height: 34px;
+  color: #FFFFFF;
+  font-weight: bold;
+  letter-spacing: -1px;
+}
+
+.ps-coach-mark__start__subtitle {
+	display: block;
+  position: relative;
+  width: 500px;
+  margin: 12px auto 7px auto;
+  font-size: 23px;
+  line-height: 25px;
+  color: #FFFFFF;
+}
+
+.ps-coach-mark__start__button {
+	display: block;
+	width: 148px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  height: 57px;
+  cursor: pointer;
+  margin: 35px auto 0px auto;
+  background: url('../images/ps-coach-mark-start-button.png') no-repeat center center;
+}
+
+.ps-coach-mark__start__close {
+	display: table;
+  position: relative;
+  margin: 25px auto 7px auto;
+  font-size: 13px;
+  line-height: 1;
+  color: #50b1e7;
+  cursor: pointer;
+}
+
+.ps-coach-mark__seta-start {
+	display: inline-block;
+  position: absolute;
+  left: 90px;
+  top: 55px;
+  width: 56px;
+  height: 72px;
+  background: url('../images/ps-coach-mark-seta-1.png') no-repeat top left;
+  transform: rotate(-25deg);
+}
+
+.ps-coach-mark__step {
+	display: none;
+}
+
+.ps-coach-mark__step__bg1, 
+.ps-coach-mark__step__bg2, 
+.ps-coach-mark__step__bg3, 
+.ps-coach-mark__step__bg4 {
+	position: absolute;
+	z-index: 3000;
+	background-image: url('../images/ps-coach-mark-bg.png');
+}
+
+.ps-coach-mark__step__bg1 {
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+
+.ps-coach-mark__step__bg2 {
+	right: 0;
+}
+
+.ps-coach-mark__step__bg3 {
+	bottom: 0;
+	left: 0;
+	width: 100%;
+}
+
+.ps-coach-mark__step__bg4 {
+	left: 0;
+}
+
+.ps-coach-mark__step__box {
+	position: absolute;
+	color: #fff;
+	padding-bottom: 50px;
+	z-index: 4000;
+}
+
+.ps-coach-mark__step__steps {
+	display: inline-block;
+	position: relative;
+  top: 0px;
+  left: 0px;
+  width: 68px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  height: 68px;
+  background: url('../images/ps-coach-mark-steps.png') no-repeat center center;
+  text-align: center;
+  padding-top: 20px;
+  font-size: 23px;
+  line-height: 27px;
+  color: #FFFFFF;
+  margin-bottom: 20px;
+}
+
+.ps-coach-mark__step__title {
+	font-size: 20px;
+	display: block;
+  line-height: 22px;
+  color: #FFFFFF;
+  font-weight: bold;
+  letter-spacing: -1px;
+  position: relative;
+}
+
+.ps-coach-mark__step__text {
+  color: #FFFFFF;
+  display: block;
+  font-size: 16px;
+  line-height: 20px;
+  margin: 5px 0px 7px 0px;
+}
+
+.ps-coach-mark__step__foco {
+	margin-top: 25px;
+	position: relative;
+}
+
+.ps-coach-mark__step__foco__C1, 
+.ps-coach-mark__step__foco__C2, 
+.ps-coach-mark__step__foco__C3, 
+.ps-coach-mark__step__foco__C4, 
+.ps-coach-mark__step__foco__F1, 
+.ps-coach-mark__step__foco__F2, 
+.ps-coach-mark__step__foco__F3, 
+.ps-coach-mark__step__foco__F4 {
+	position: absolute;
+	width: 24px;
+  height: 24px;
+}
+
+.ps-coach-mark__step__foco__C1, 
+.ps-coach-mark__step__foco__C2, 
+.ps-coach-mark__step__foco__C3, 
+.ps-coach-mark__step__foco__C4 {
+  background-image: url('../images/ps-coach-mark-c.png');
+  background-repeat: no-repeat;
+}
+
+.ps-coach-mark__step__foco__F1, 
+.ps-coach-mark__step__foco__F2, 
+.ps-coach-mark__step__foco__F3, 
+.ps-coach-mark__step__foco__F4 {
+	background-size: 100% 100%;
+}
+
+.ps-coach-mark__step__foco__C1 {
+  top: 0px;
+  left: 0px;
+  background-position: 0px 0px;
+}
+.ps-coach-mark__step__foco__C2 {
+	top: 0px;
+  right: 0px;
+  background-position: -24px 0px;
+}
+.ps-coach-mark__step__foco__C3 {
+	bottom: 2px;
+  right: 0px;
+  background-position: -24px -24px;
+}
+.ps-coach-mark__step__foco__C4 {
+	bottom: 2px;
+  left: 0px;
+  background-position: 0px -24px;
+}
+.ps-coach-mark__step__foco__F1 {
+	width: calc(100% - 48px);
+  top: 0px;
+  left: 24px;
+  background-image: url('../images/ps-coach-mark-f1.png');
+}
+.ps-coach-mark__step__foco__F2 {
+	height: calc(100% - 48px);
+	top: 24px;
+  right: 0px;
+  background-image: url('../images/ps-coach-mark-f2.png');
+}
+.ps-coach-mark__step__foco__F3 {
+	width: calc(100% - 48px);
+	bottom: 2px;
+  left: 24px;
+  background-image: url('../images/ps-coach-mark-f3.png');
+}
+.ps-coach-mark__step__foco__F4 {
+	height: calc(100% - 48px);
+	top: 24px;
+  left: 0px;
+  background-image: url('../images/ps-coach-mark-f4.png');
+}
+
+.ps-coach-mark__step__button {
+	position: absolute;
+  bottom: 0px;
+  width: 78px;
+  height: 29px;
+  right: 0;
+  background-color: #3bafff;
+  cursor: pointer;
+  padding: 5px;
+  color: #FFFFFF;
+  font-size: 14px;
+  line-height: 19px;
+  border-radius: 4px;
+  text-align: center;
+  font-weight: 700;
+  font-family: Arial, sans-serif;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.ps-coach-mark__step__button.prev {
+  right: auto;
+  left: 0;
+}
+
+.ps-coach-mark__step__seta {
+	display: inline-block;
+	position: absolute;
+  left: -60px;
+  top: 10px;
+  width: 50px;
+  height: 99px;
+  background: url('../images/ps-coach-mark-seta-step.png') no-repeat top left;
+}
+
+.ps-coach-mark__finish {
+	display: none;
+}
+
+.ps-coach-mark__content {
+	padding-bottom: 60px;
+}
+
+.ps-coach-mark__finish .ps-coach-mark__step__button {
+	right: 16%;
+}
+
+.ps-coach-mark__finish .ps-coach-mark__step__button.prev {
+	right: auto;
+  left: 16%;
+}
